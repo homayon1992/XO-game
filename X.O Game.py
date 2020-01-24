@@ -3,8 +3,28 @@ player = 1
 
 
 def winner():
-    return False
+        if (m[0][0] == 'X' and m[0][1] == 'X' and m[0][2] == 'X') or \
+                (m[1][0] == 'X' and m[1][1] == 'X' and m[1][2] == 'X') or \
+                (m[2][0] == 'X' and m[2][1] == 'X' and m[2][2] == 'X') or \
+                (m[0][0] == 'X' and m[1][0] == 'X' and m[2][0] == 'X') or \
+                (m[0][1] == 'X' and m[1][1] == 'X' and m[2][1] == 'X') or \
+                (m[0][2] == 'X' and m[1][2] == 'X' and m[2][2] == 'X') or \
+                (m[0][0] == 'X' and m[1][1] == 'X' and m[2][2] == 'X') or \
+                (m[0][2] == 'X' and m[1][1] == 'X' and m[2][0] == 'X'):
+            print("X is winner!")
+            return True
+        if (m[0][0] == 'O' and m[0][1] == 'O' and m[0][2] == 'O') or \
+                (m[1][0] == 'O' and m[1][1] == 'O' and m[1][2] == 'O') or \
+                (m[2][0] == 'O' and m[2][1] == 'O' and m[2][2] == 'O') or \
+                (m[0][0] == 'O' and m[1][0] == 'O' and m[2][0] == 'O') or \
+                (m[0][1] == 'O' and m[1][1] == 'O' and m[2][1] == 'O') or \
+                (m[0][2] == 'O' and m[1][2] == 'O' and m[2][2] == 'O') or \
+                (m[0][0] == 'O' and m[1][1] == 'O' and m[2][2] == 'O') or \
+                (m[0][2] == 'O' and m[1][1] == 'O' and m[2][0] == 'O'):
+            print("O is winner!")
+            return True
 
+        return False
 
 def board_is_full(): 
     for row in m:
